@@ -3,7 +3,7 @@
   "description": "Magnolia bookshelf example (GraphQL) with Gatsby",
   "author": " Maik Jablonski <jablonski@neoskop.de>",
   "license": "0BSD",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -12,9 +12,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "2.28.2",
+    "gatsby": "^2.32.4",
     "gatsby-plugin-react-helmet": "3.6.0",
-    "gatsby-source-graphql": "2.10.0",
+    "gatsby-source-graphql": "^2.14.0",
     "node-fetch": "2.6.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
