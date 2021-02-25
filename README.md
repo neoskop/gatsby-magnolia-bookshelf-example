@@ -1,4 +1,4 @@
-# Example for using Magnolia via GraqhQL with Gatsby
+# Example for using Magnolia via GraphQL with Gatsby
 
 Demonstrates usage of the `gatsby-source-graphql` plugin.
 
@@ -9,12 +9,12 @@ For this project, you need a Magnolia author instance with GraphQL support runni
 Find the sample content,content types, and Magnolia installation instructions here:
 [Bookcase Repo](https://git.magnolia-cms.com/projects/documentation/repos/bookcase/browse)
 
-
 ## Setup this Gatsby project
 
-- Install dependencies via `npm install`.
+- Install dependencies via `npm ci`.
 - Start development mode via `npm run develop`.
 - Build with `npm run build`.
 
 ## Resources
+
 [Magnolia GraphQL API Docs](https://docs.magnolia-cms.com/product-docs/Developing/API/GraphQL-API.html)
