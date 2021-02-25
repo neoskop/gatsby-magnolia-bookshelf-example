@@ -6,8 +6,9 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const query = await graphql(`
     query {
       magnolia {
-        bookshelves {
+        books {
           title
+          description
           authors {
             name
           }
@@ -15,6 +16,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
             link
             path
           }
+          
           _metadata {
             path
           }
@@ -23,11 +25,11 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     }
   `);
 
-  const bookshelves = query.data.magnolia.bookshelves;
+  const books = query.data.magnolia.books;
 
   // Retrieve images and store them in public directory
   // Use 'link' to download and 'path' to store image (= url).
-  bookshelves.forEach(async (book) => {
+  books.forEach(async (book) => {
     const response = await fetch(
       'http://localhost:8080' + book.frontcover.link
     );
@@ -42,12 +44,12 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     path: '/',
     component: path.resolve(`src/components/BookListing.js`),
     context: {
-      books: bookshelves,
+      books: books,
     },
   });
 
   // Create detail pages for each book
-  bookshelves.forEach((book) => {
+  books.forEach((book) => {
     createPage({
       path: book._metadata.path,
       component: path.resolve(`src/components/BookDetail.js`),
