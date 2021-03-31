@@ -1,10 +1,12 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Layout from './Layout';
 
-export default function BookListing({ pageContext: { books } }) {
+export default function BookIndexPage({ pageContext: { books } }) {
   return (
     <Layout>
+      <Helmet title="Book index" />
       <ul>
         {books.map(({ title, authors, _metadata }) => {
           return (

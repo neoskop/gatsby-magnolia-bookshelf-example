@@ -9,7 +9,6 @@ For this project, you need a Magnolia author instance with GraphQL support runni
 Find the sample content,content types, and Magnolia installation instructions here:
 [Bookcase Repo](https://git.magnolia-cms.com/projects/documentation/repos/bookcase/browse)
 
-
 ## Setup this Gatsby project
 
 - Install dependencies via `npm install`.
@@ -17,4 +16,5 @@ Find the sample content,content types, and Magnolia installation instructions he
 - Build with `npm run build`.
 
 ## Resources
+
 [Magnolia GraphQL API Docs](https://docs.magnolia-cms.com/product-docs/Developing/API/GraphQL-API.html)
