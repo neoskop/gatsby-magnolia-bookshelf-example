@@ -1,4 +1,4 @@
-# Example for using Magnolia via GraqhQL with Gatsby
+# Example for using Magnolia via GraphQL with Gatsby
 
 Demonstrates usage of the `gatsby-source-graphql` plugin.
 
@@ -11,7 +11,7 @@ Find the sample content,content types, and Magnolia installation instructions he
 
 ## Setup this Gatsby project
 
-- Install dependencies via `npm install`.
+- Install dependencies via `npm ci`.
 - Start development mode via `npm run develop`.
 - Build with `npm run build`.
 
