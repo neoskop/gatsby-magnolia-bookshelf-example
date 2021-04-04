@@ -7,14 +7,19 @@ export default function BookIndexPage({ pageContext: { books } }) {
   return (
     <Layout>
       <Helmet title="Book index" />
+      <h1>Magnolia bookcase demo</h1>
       <ul>
         {books.map(({ title, authors, _metadata }) => {
           return (
             <li key={_metadata.path}>
               <Link to={_metadata.path}>
-                {authors.map(({ name }) => {
-                  return <b key={name}>{name}</b>;
-                })}
+                <b>
+                  {authors
+                    .map(({ name }) => {
+                      return name;
+                    })
+                    .join(', ')}
+                </b>
                 : {title}
               </Link>
             </li>

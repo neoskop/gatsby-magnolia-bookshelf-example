@@ -11,12 +11,14 @@ export default function BookDetailPage({
       <Helmet title={title} />
       <div className="row">
         <div className="column">
-          <h2>{title}</h2>
-          <h3>
-            {authors.map(({ name }) => {
-              return <b key={name}>{name}</b>;
-            })}
-          </h3>
+          <h1>{title}</h1>
+          <h2>
+            {authors
+              .map(({ name }) => {
+                return name;
+              })
+              .join(', ')}
+          </h2>
           <p>{description}</p>
           <Link to="/">
             <button>Back</button>
