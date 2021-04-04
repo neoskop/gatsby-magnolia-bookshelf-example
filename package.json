@@ -1,7 +1,7 @@
 {
   "author": "Maik Jablonski <jablonski@neoskop.de>",
   "dependencies": {
-    "gatsby": "3.2.0",
+    "gatsby": "3.2.1",
     "gatsby-plugin-react-helmet": "4.2.0",
     "gatsby-source-graphql": "3.2.0",
     "node-fetch": "2.6.1",
@@ -19,5 +19,5 @@
     "serve": "gatsby serve",
     "start": "gatsby develop"
   },
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
