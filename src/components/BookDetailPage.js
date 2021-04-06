@@ -12,13 +12,7 @@ export default function BookDetailPage({
       <div className="row">
         <div className="column">
           <h1>{title}</h1>
-          <h2>
-            {authors
-              .map(({ name }) => {
-                return name;
-              })
-              .join(', ')}
-          </h2>
+          <h2>{authors.map(({ name }) => name).join(', ')}</h2>
           <p>{description}</p>
           <Link to="/">
             <button>Back</button>

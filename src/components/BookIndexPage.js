@@ -9,22 +9,13 @@ export default function BookIndexPage({ pageContext: { books } }) {
       <Helmet title="Book index" />
       <h1>Magnolia bookcase demo</h1>
       <ul>
-        {books.map(({ title, authors, _metadata }) => {
-          return (
-            <li key={_metadata.path}>
-              <Link to={_metadata.path}>
-                <b>
-                  {authors
-                    .map(({ name }) => {
-                      return name;
-                    })
-                    .join(', ')}
-                </b>
-                : {title}
-              </Link>
-            </li>
-          );
-        })}
+        {books.map(({ title, authors, _metadata }) => (
+          <li key={_metadata.path}>
+            <Link to={_metadata.path}>
+              <b>{authors.map(({ name }) => name).join(', ')}</b>: {title}
+            </Link>
+          </li>
+        ))}
       </ul>
     </Layout>
   );
